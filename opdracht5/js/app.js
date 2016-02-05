@@ -1,3 +1,5 @@
+//NOTE: Got the templateing idea from Martijn Nieuwenhuizen en Dylan Vens
+
 (function() {
 	'use strict';
 
@@ -16,10 +18,10 @@
 		init: function() {
 
 			// haschanged event listener
-			// kijkt naar de hash, in de url, als hij die ziet dan voert hij een functie uit
-			window.addEventListener('hashchange', sections.toggle ,false);
+			// als de url veranderd start dan die functie, in de url
+			window.addEventListener('hashchange', sections.toggle);
 			// also check the page on load voer dan ook een functie uit
-			window.addEventListener('load', sections.toggle ,false);
+			window.addEventListener('load', sections.toggle);
 
 		}
 	};
@@ -34,15 +36,13 @@
 			// als er een url is pak dan de 
 			if ( url ) {
 
-				//NOTE: Got the templateing idea from Dylan Vens
-
 				// pak uit de html het template dat de url matched 
 				var matchingTemplate = document.querySelector(url);
 
-				// If this templates exists
+				// als de variable bestaat
 				if ( matchingTemplate ) {
 
-					// Get the content from the matching template and use that content in the main html
+					// plaats de de html van die sectie in de main
 					main.innerHTML = matchingTemplate.innerHTML;
 
 				} else {

@@ -62,3 +62,9 @@ main {
 section {
 	width: 100%;
 }
+.template {
+	display: none;
+}
+main .template {
+	display: block;
+}
