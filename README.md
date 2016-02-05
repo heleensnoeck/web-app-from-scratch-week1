@@ -7,7 +7,7 @@ Repository for the course "Web App from Scratch" for the minor "Everything Web" 
 
 ##### Nadelen:
 
-een library is zwaarder met inladen. Daarnaast worden veel functionaliteiten die in een liberie zitten niet benut. Libraries worden ook geupdate en hierdoor weer zwaarder. 
+Een library is zwaarder met inladen. Daarnaast worden veel functionaliteiten die in een liberie zitten niet benut. Libraries worden ook geupdate en hierdoor weer zwaarder. 
 
 Het kost veel tijd om een library eigen te maken. Daarnaast is het ook nuttig als je alle documentatie leest zodat je als developer precies weet waarover het gaat, dit is makkelijker als je bijv. bugs moet oplossen.
  
