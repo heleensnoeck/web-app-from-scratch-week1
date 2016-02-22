@@ -27,3 +27,4 @@
 
 
 
+//zie nog best een aantal document.querySelectors / getElementById's > misschien handig om hiervoor een aparte variables module voor aan te maken
