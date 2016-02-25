@@ -1,3 +1,3 @@
-# CSS-to-the-Rescue url to website
-http://spotitshopit.com/met_hammer
+# web-app-from-scratch url to website
+http://spotitshopit.com/done
 
