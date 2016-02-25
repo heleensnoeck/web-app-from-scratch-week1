@@ -125,7 +125,6 @@
 	};
 
 	var sections = {
-
 		render: function (data) {
 			
 			var morning = document.getElementById('weather_morning');
