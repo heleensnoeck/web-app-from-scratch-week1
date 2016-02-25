@@ -1,0 +1,229 @@
+/*default*/
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+h3 {
+   text-transform: uppercase;
+   color: rgba(255, 255, 255, 0.4);
+   margin-bottom: 0;
+   font-weight: 700;
+ }
+  
+h4, h5 {
+  color: #ffffff;
+  font-size: 28px;
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;    
+  font-weight: 400;
+}
+
+
+h6 {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/*loader*/
+
+#loading {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  left: calc(50% - 100px);
+  top: calc(50% - 320px);
+}
+
+#loading img {
+  width: 100%;
+}
+
+/*searchfield*/
+
+#searchForm {
+  height: 38px;
+  background-color: #f3f3f3;
+}
+
+input {
+    width: 100%;
+    padding: 1em;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    color: #aaaaaa;
+    text-transform: uppercase;
+    border: solid 1px #f3f3f3;
+    background: #f3f3f3;
+    margin-bottom: 10px;
+}
+
+/*section colors*/
+#weather_morning {
+  background-color: #e3bb88;
+}
+
+#weather_day {
+  background-color: #d89864;
+}
+
+#weather_evening {
+  background-color: #b1695a;
+}
+
+#weather_night {
+  background-color: #644749;
+}
+
+
+/*app*/
+
+main { 
+  height: 597px;
+  margin:0 auto;
+}
+
+section {
+    height: calc(100% - 50px);
+    width: 100%;
+    overflow: hidden;
+}
+
+.weather {
+  -webkit-transition: all 0.7s ease-in-out;
+          transition: all 0.7s ease-in-out;
+  height: 16%;
+  overflow: hidden;
+}
+
+.content {
+    float:right;
+    width:10em;
+    padding:0.8em;
+}
+
+.icon {
+  z-index: -1;
+  float: left;
+  -webkit-transform: translateY(-136px); /*zorgt er voor dat alles gehide is*/
+          -ms-transform: translateY(-136px);
+      transform: translateY(-136px);
+  padding-left: 0.5em;
+}
+
+
+/*hover*/
+
+.weather:hover, 
+main section:not(:hover) .weather:nth-of-type(3), 
+.weather:focus{
+  height: 44%;
+}
+
+
+.weather, .icon, .data {
+  -webkit-transition: all 0.7s ease-in-out;
+          transition: all 0.7s ease-in-out;
+}
+
+/*icons*/
+
+.weather:hover .icon, main section:not(:hover) .weather:nth-of-type(3) .icon { /*alles behalven de eerste section + icon*/
+  -webkit-transform: translateY(0px); /*begin waar je nu bent*/
+          -ms-transform: translateY(0px);
+      transform: translateY(0px);
+          z-index: 1;
+}
+
+.weather:hover + .weather .icon, main section:not(:hover) .weather:nth-of-type(3) + .weather:focus .icon { 
+  -webkit-transform: translateY(-400px);
+          -ms-transform: translateY(-400px);
+      transform: translateY(-400px);
+}
+
+/*data*/
+.data {
+ -webkit-transform: translateY(136px); /*zorgt er voor dat alles gehide is*/
+         -ms-transform: translateY(136px);
+     transform: translateY(136px);
+}
+
+.weather:hover .data, main section:not(:hover) .weather:nth-of-type(3) .data {
+  -webkit-transform: translateY(0px); /*begin waar je nu bent*/
+          -ms-transform: translateY(0px);
+      transform: translateY(0px);
+          z-index: 1;
+}
+
+
+.weather:hover + .weather .data, main section:not(:hover) .weather:nth-of-type(3) + .weather:focus .data { 
+  -webkit-transform: translateY(400px);
+          -ms-transform: translateY(400px);
+      transform: translateY(400px);
+}
+
+
+#weather_overlay {
+  z-index:1;
+  background-color: #e3bb88;
+  max-height: 240px;
+  width: 100%;
+  overflow-y: hidden;
+  -webkit-transition-property: all;
+          transition-property: all;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+          transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+#weather_overlay .show {
+  max-height: 0;
+}
+
+.content_overlay {
+  margin: 0 auto;
+  width: 10em;
+  padding: 1em;
+}
+
+.content_overlay p {
+  color: #ffffff;
+}
+
+button {
+  font-family: inherit;
+  font-size: 100%;
+  padding: .3em 2em;
+  color: #444;
+  color: rgba(0,0,0,.8);
+  border: 1px solid #999;
+  border: 0 rgba(0,0,0,0);
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.hide {
+  display: none;
+}
+
+#weather_city {
+  color: #8ba892;
+}
+
+
+
+
+
+
+
